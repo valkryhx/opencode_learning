@@ -1,0 +1,30 @@
+{
+  // 每轮对话结束后响铃（session.idle = assistant 完成本轮响应、进入等待状态时触发）
+  "session": [
+    {
+      "id": "beep-on-turn-end",
+      "when": {
+        "event": "session.idle"
+      },
+      "run": "python C:/Users/Administrator/.config/opencode/scripts/beep.py"
+    } //,
+    //{
+    //  "id": "tianwang-on-turn-end",
+     // "when": {
+     //   "event": "session.idle"
+     // },
+     // "run": "python C:/Users/Administrator/.config/opencode/scripts/tianwang.py"
+    //}
+  ]
+
+  // 原 tool hook（每次 tool call 结束都触发，太频繁，已停用）
+  // "tool": [
+  //   {
+  //     "id": "beep-on-done",
+  //     "when": {
+  //       "phase": "after"
+  //     },
+  //     "run": "python C:/Users/Administrator/.config/opencode/scripts/beep.py"
+  //   }
+  // ]
+}
